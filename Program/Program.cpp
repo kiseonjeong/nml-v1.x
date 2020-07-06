@@ -17,20 +17,22 @@ int _tmain(int argc, _TCHAR* argv[])
 	t = clock();
 	for (int i = 0; i < 100000; i++)
 	{
-// 		for (int j = 0; j < m0.length(); j++)
+// 		for (int j = 0; j < m0.rows; j++)
 // 		{
-// 			m0[0] = 3.14;
+// 			for (int k = 0; k < m0.cols; k++)
+// 			{
+// 				m0(0) = 3.14;
+// 			}
 // 		}
-		numat m2(msize(100, 100));
-		m2 = m0;
+		numat m2(m0);
 	}
 	t = clock() - t;
 	cout << (float)t << "ms" << endl;
-// 	test_broadcast();
-//	test_decomposition();
-// 	test_interpolation();
-//	test_regression();
-//	test_spline();
+	test_broadcast();
+	test_decomposition();
+	test_interpolation();
+	test_regression();
+	test_spline();
 
 	return 0;
 }

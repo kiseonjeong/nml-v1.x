@@ -88,7 +88,7 @@ namespace nml
 	void curvefit::copyObject(const object& obj)
 	{
 		// Do down casting
-		curvefit* _obj = (curvefit*)&obj;
+		const curvefit* _obj = static_cast<const curvefit*>(&obj);
 
 		// Copy the parameters
 		deg = _obj->deg;

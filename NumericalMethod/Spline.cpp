@@ -119,7 +119,7 @@ namespace nml
 	void spline1d::copyObject(const object& obj)
 	{
 		// Do down casting
-		spline1d* _obj = (spline1d*)&obj;
+		const spline1d* _obj = static_cast<const spline1d*>(&obj);
 
 		// Copy the parameters
 		numpt = _obj->numpt;
@@ -359,7 +359,7 @@ namespace nml
 	void cubic_params::copyObject(const object& obj)
 	{
 		// Do down casting
-		cubic_params* _obj = (cubic_params*)&obj;
+		const cubic_params* _obj = static_cast<const cubic_params*>(&obj);
 
 		// Copy the parameters
 		_type = _obj->_type;
@@ -510,7 +510,7 @@ namespace nml
 	void notaknot::copyObject(const object& obj)
 	{
 		// Do down casting
-		notaknot* _obj = (notaknot*)&obj;
+		const notaknot* _obj = static_cast<const notaknot*>(&obj);
 
 		// Copy the parameters
 		_type = _obj->_type;
@@ -603,7 +603,7 @@ namespace nml
 	void spline3d::copyObject(const object& obj)
 	{
 		// Do downcasting
-		spline3d* _obj = (spline3d*)&obj;
+		const spline3d* _obj = static_cast<const spline3d*>(&obj);
 
 		// Copy the parameters
 		numpt = _obj->numpt;
@@ -857,7 +857,7 @@ namespace nml
 	void hermite_params::copyObject(const object& obj)
 	{
 		// Do down casting
-		hermite_params* _obj = (hermite_params*)&obj;
+		const hermite_params* _obj = static_cast<const hermite_params*>(&obj);
 
 		// Copy the parameters
 		_type = _obj->_type;
@@ -989,7 +989,7 @@ namespace nml
 	void cardinal::copyObject(const object& obj)
 	{
 		// Do down casting
-		cardinal* _obj = (cardinal*)&obj;
+		const cardinal* _obj = static_cast<const cardinal*>(&obj);
 
 		// Copy the parameters
 		_type = _obj->_type;
@@ -1156,7 +1156,7 @@ namespace nml
 	void hermite::copyObject(const object& obj)
 	{
 		// Do down casting
-		hermite* _obj = (hermite*)&obj;
+		const hermite* _obj = static_cast<const hermite*>(&obj);
 
 		// Copy the parameters
 		numpt = _obj->numpt;
@@ -1344,7 +1344,7 @@ namespace nml
 	void akima::copyObject(const object& obj)
 	{
 		// Do down casting
-		akima* _obj = (akima*)&obj;
+		const akima* _obj = static_cast<const akima*>(&obj);
 
 		// Copy the parameters
 		numpt = _obj->numpt;

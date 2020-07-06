@@ -103,7 +103,7 @@ namespace nml
 	void LUD::copyObject(const object& obj)
 	{
 		// Do down casting
-		LUD* _obj = (LUD*)&obj;
+		const LUD* _obj = static_cast<const LUD*>(&obj);
 
 		// Copy the parameters
 		mode = _obj->mode;
@@ -277,7 +277,7 @@ namespace nml
 	void QRD::copyObject(const object& obj)
 	{
 		// Do down casting
-		QRD* _obj = (QRD*)&obj;
+		const QRD* _obj = static_cast<const QRD*>(&obj);
 
 		// Copy the memories
 		T = _obj->T;
@@ -461,7 +461,7 @@ namespace nml
 	void EVD::copyObject(const object& obj)
 	{
 		// Do down casting
-		EVD* _obj = (EVD*)&obj;
+		const EVD* _obj = static_cast<const EVD*>(&obj);
 
 		// Copy the memories
 		D = _obj->D;

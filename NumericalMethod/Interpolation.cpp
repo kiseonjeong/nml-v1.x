@@ -86,7 +86,7 @@ namespace nml
 	void vandermonde::copyObject(const object& obj)
 	{
 		// Do down casting
-		vandermonde* _obj = (vandermonde*)&obj;
+		const vandermonde* _obj = static_cast<const vandermonde*>(&obj);
 
 		// Copy the parameters
 		deg = _obj->deg;
@@ -230,7 +230,7 @@ namespace nml
 	void newton::copyObject(const object& obj)
 	{
 		// Do down casting
-		newton* _obj = (newton*)&obj;
+		const newton* _obj = static_cast<const newton*>(&obj);
 
 		// Copy the parameters
 		deg = _obj->deg;
@@ -390,7 +390,7 @@ namespace nml
 	void lagrange::copyObject(const object& obj)
 	{
 		// Do down casting
-		lagrange* _obj = (lagrange*)&obj;
+		const lagrange* _obj = static_cast<const lagrange*>(&obj);
 
 		// Copy the parameters
 		deg = _obj->deg;
